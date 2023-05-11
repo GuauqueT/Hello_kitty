@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+  background: #252839 ;
+}
+
+h1, h2 {
+  color: white;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+font-size: 36px;
+font-weight: bold;
+color: #fffafa;
+text-align: center; 
+}
+
+h2 {
+  margin-top: 90px; 
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+img {
+  cursor: pointer; 
+  margin-top: 50px;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+
+img:hover {
+opacity: 0.7;
+}

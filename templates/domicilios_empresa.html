@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+        <link rel="stylesheet" href="diseño_dom.css">
+    </head>
+    <meta charset="UTF-8">
+    <title>Hello Kitty Bakery</title>
+    <link rel="stylesheet" href="diseño_dom.css">
+  </head>
+  <body>
+    <script>
+      function showDeliveryMessage() {
+        if (document.getElementById('delivery').checked) {
+          alert('El servicio de domicilio está disponible con un costo adicional');
+        }
+      }
+    </script>
+    <h1>Hello Kitty Bakery</h1>
+    <form>
+      <label for="nit">Nit de la empresa:</label>
+      <input type="text" id="nit" required><br><br>
+      <label for="name">Nombre de la empresa:</label>
+      <input type="text" id="name" required><br><br>
+      <label for="address">Dirección:</label>
+      <input type="text" id="address" required><br><br>
+      <label for="tipo">tipo: cumpleaños, matrimonio, divorcio, piñata,
+        aniversario, entierro: </label>
+      <input type="text" id="tipo" required><br><br>
+      <label for="peso">Peso:</label>
+      <input type="number" id="peso" required><br><br>
+      <label for="products">Productos:</label>
+      <select id="products" multiple required>
+        <option value="pastel1">Pastel de fresas</option>
+        <option value="pastel2">Pastel de chocolate</option>
+        <option value="pastel3">Pastel de zanahoria</option>
+        <option value="pastel4">Pastel de vainilla y frutas</option>
+        <option value="pastel5">Pastel de tres leches y oreo</option>
+        <option value="pastel6">Pastel de oreo</option>
+      </select><br><br>
+      <label for="delivery">¿Desea servicio de domicilio?</label>
+      <input type="checkbox" id="delivery" onchange="showDeliveryMessage()"><br><br>
+      <label for="deliveryCost">Costo adicional del servicio de domicilio:</label>
+      <input type="number" id="deliveryCost" value="5000"><br><br>
+      <input type="submit" value="Realizar Pedido">
+    </form>
+  </body>
+</html>

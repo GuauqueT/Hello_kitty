@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mi página web</title>
+<link rel="stylesheet" href="servicios.css">
+<style>
+
+
+</style>
+</head>
+<body>
+<h1>Seleccione el servicio que requiere</h1>
+
+<div class="contenedor">
+    <div>
+      <h2>Domicilios para ti</h2>
+      <img src="imagenes/imagen1.jpg" onclick="window.location.href='domicilios_para_ti.html';" width="250" height="300" onclick="fade(this)">
+    </div>
+  
+    <div>
+      <h2>Domicilios para tu empresa</h2>
+      <img src="imagenes/imagen3.jpg" onclick="window.location.href='domicilios_empresa.html';" width="250" height="300" onclick="fade(this)">
+    </div>
+  
+    <div>
+      <h2>Pasteleros a domicilio</h2>
+      <img src="imagenes/imagen4.jpg" onclick="window.location.href='domicilios_pastelero.html';" width="250" height="300" onclick="fade(this)">
+    </div>
+  </div>
+
+<script>
+// Función para desvanecer la imagen al hacer clic
+function fade(img) {
+  img.style.opacity = 0.5;
+  setTimeout(function() { img.style.opacity = 1; }, 500);
+}
+</script>
+</body>
+</html>
