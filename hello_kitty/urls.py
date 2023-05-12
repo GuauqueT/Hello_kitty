@@ -23,5 +23,6 @@ urlpatterns = [
     path('empleado/',include(('empleado.urls','empleado'), namespace='empleado')),
     path('cliente/',include(('cliente.urls','cliente'), namespace='cliente')),
     path('pastel/',include(('pastel.urls','pastel'), namespace='pastel')),
-    path('orden/',include(('orden.urls','orden'), namespace='orden'))
+    path('orden/',include(('orden.urls','orden'), namespace='orden')),
+    path('ingrediente/',include(('ingrediente.urls','ingrediente'), namespace='ingrediente')),
 ]
