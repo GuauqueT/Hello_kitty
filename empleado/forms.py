@@ -15,9 +15,9 @@ class DecoradorForm (forms.ModelForm):
             'salario': 'Salario'
         }
         widgets = {
-            'codigo': forms.NumberInput(attrs={'class': 'form-contol'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-contol'}),
-            'salario': forms.NumberInput(attrs={'class': 'form-contol'}),
+            'codigo': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
         }
         
 class PasteleroForm (forms.ModelForm):
@@ -40,10 +40,10 @@ class PasteleroForm (forms.ModelForm):
             'exp': 'Experiencia'
         }
         widgets = {
-            'codigo': forms.NumberInput(attrs={'class': 'form-contol'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-contol'}),
-            'salario': forms.NumberInput(attrs={'class': 'form-contol'}),
-            'pasaporte': forms.TextInput(attrs={'class': 'form-contol'}),
-            'pais': forms.TextInput(attrs={'class': 'form-contol'}),
-            'exp': forms.TextInput(attrs={'class': 'form-contol'}),
+            'codigo': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'pasaporte': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'pais': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'exp': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
         }
