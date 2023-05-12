@@ -1,44 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tabla con botones</title>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				<th>Columna 1</th>
-				<th>Columna 2</th>
-				<th>Columna 3</th>
-				<th>Columna 4</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input type="text" name="columna1" id="columna1"></td>
-				<td><input type="text" name="columna2" id="columna2"></td>
-				<td><input type="text" name="columna3" id="columna3"></td>
-				<td><input type="text" name="columna4" id="columna4"></td>
-			</tr>
-		</tbody>
-	</table>
-	<button type="button" onclick="agregarFila()">Agregar Fila</button>
-
-	<script>
-		function agregarFila() {
-			var table = document.getElementsByTagName("table")[0];
-			var newRow = table.insertRow(table.length);
-
-			var columna1 = newRow.insertCell(0);
-			var columna2 = newRow.insertCell(1);
-			var columna3 = newRow.insertCell(2);
-			var columna4 = newRow.insertCell(3);
-
-			columna1.innerHTML = document.getElementById("columna1").value;
-			columna2.innerHTML = document.getElementById("columna2").value;
-			columna3.innerHTML = document.getElementById("columna3").value;
-			columna4.innerHTML = document.getElementById("columna4").value;
-		}
-	</script>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block body %}
+<div class="container mt-3">
+  <h2>Empleados</h2>
+  <p>Informacion de los empleados de la pasteleria:</p>   
+  <button type="button" class="btn btn-success">Agregar Pastelero</button>
+  <button type="button" class="btn btn-info">Agregar Decorador</button>         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>16584352</td>
+        <td>Rosa Mesa Cabeza</td>
+        <td>1.000.000$</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}
