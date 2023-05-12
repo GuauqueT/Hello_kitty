@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container mt-3">
-  <h2>Empleados</h2>
+  <h1>Decoradores</h1>
   <p>Informacion de los empleados de la pasteleria:</p>   
-  <button type="button" class="btn btn-success">Agregar Pastelero</button>
-  <button type="button" class="btn btn-info">Agregar Decorador</button>         
+  <a href="{% url 'empleado:registro_empleado' type='pastelero' %}" class="btn btn-success">Agregar Pastelero</a>
+  <a href="{% url 'empleado:registro_empleado' type='decorador' %}" class="btn btn-info">Agregar Decorador</a>  
   <table class="table table-striped">
     <thead>
       <tr>
@@ -14,11 +14,41 @@
       </tr>
     </thead>
     <tbody>
+      {% for decorador in decoradores %}
       <tr>
-        <td>16584352</td>
-        <td>Rosa Mesa Cabeza</td>
-        <td>1.000.000$</td>
+        {{ decorador.codigo }}
+        {{ decorador.nombre }}
+        {{ decorador.salario }}
       </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="container mt-3">
+  <h1>Pasteleros</h1>
+  <p>Informacion de los empleados de la pasteleria:</p>   
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Salario</th>
+        <th>Pasaporte</th>
+        <th>País</th>
+        <th>Experiencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pastelero in pasteleros %}
+      <tr>
+        {{ pastelero.codigo }}
+        {{ pastelero.nombre }}
+        {{ pastelero.salario }}
+        {{ pastelero.pasaporte }}
+        {{ pastelero.pais }}
+        {{ pastelero.exp }}
+      </tr>
+      {% endfor %}
     </tbody>
   </table>
 </div>
