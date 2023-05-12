@@ -16,8 +16,8 @@ class DecoradorForm (forms.ModelForm):
         }
         widgets = {
             'codigo': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Nombre'}),
+            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Salario'}),
         }
         
 class PasteleroForm (forms.ModelForm):
@@ -41,9 +41,9 @@ class PasteleroForm (forms.ModelForm):
         }
         widgets = {
             'codigo': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'pasaporte': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'pais': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
-            'exp': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Codigo'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Nombre'}),
+            'salario': forms.NumberInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Salario'}),
+            'pasaporte': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Pasaportre'}),
+            'pais': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'País'}),
+            'exp': forms.TextInput(attrs={'class': 'form-control','id':'floatingImput', 'placeholder': 'Experiencia'}),
         }

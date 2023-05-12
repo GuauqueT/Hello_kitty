@@ -16,9 +16,9 @@ class EmpresaForm(forms.ModelForm):
             'direccion': 'Direccion'
         }
         widgets = {
-            'nit': forms.NumberInput(attrs={'class': 'form-contol'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-contol'}),
-            'direccion': forms.TextInput(attrs={'class': 'form-contol'}),
+            'nit': forms.NumberInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'nit'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'nombre'}),
+            'direccion': forms.TextInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'direccion'}),
         }
 
 class PersonaForm(forms.ModelForm):
@@ -35,11 +35,11 @@ class PersonaForm(forms.ModelForm):
             'cedula': 'Cedula',
             'nombre': 'Nombre',
             'direccion': 'Direccion',
-            'fecha_nacimiento': 'Fecha de Nacimiento'
+            'fecha_nacimiento': 'Fecha de Nacimiento (DD/MM/YYYY)'
         }
         widgets = {
-            'cedula': forms.NumberInput(attrs={'class': 'form-contol'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-contol'}),
-            'direccion': forms.TextInput(attrs={'class': 'form-contol'}),
-            'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-contol'}),
+            'cedula': forms.NumberInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'cedula'}),
+            'nombre': forms.TextInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'nombre'}),
+            'direccion': forms.TextInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'direccion'}),
+            'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control', 'id':'floatingInput', 'placeholder': 'fecha_nacimiento'}),
         }

@@ -1,55 +1,61 @@
 {% extends 'base.html' %}
 {% block body %}
-<div class="container mt-3">
-  <h1>Decoradores</h1>
-  <p>Informacion de los empleados de la pasteleria:</p>   
-  <a href="{% url 'empleado:registro_empleado' type='pastelero' %}" class="btn btn-success">Agregar Pastelero</a>
-  <a href="{% url 'empleado:registro_empleado' type='decorador' %}" class="btn btn-info">Agregar Decorador</a>  
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Nombre</th>
-        <th>Salario</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for decorador in decoradores %}
-      <tr>
-        <td>{{ decorador.codigo }}</td>
-        <td>{{ decorador.nombre }}</td>
-        <td>{{ decorador.salario }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-<div class="container mt-3">
-  <h1>Pasteleros</h1>
-  <p>Informacion de los empleados de la pasteleria:</p>   
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Nombre</th>
-        <th>Salario</th>
-        <th>Pasaporte</th>
-        <th>País</th>
-        <th>Experiencia</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for pastelero in pasteleros %}
-      <tr>
-        <td>{{ pastelero.codigo }}</td>
-        <td>{{ pastelero.nombre }}</td>
-        <td>{{ pastelero.salario }}</td>
-        <td>{{ pastelero.pasaporte }}</td>
-        <td>{{ pastelero.pais }}</td>
-        <td>{{ pastelero.exp }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<div class="container-fluid">
+  <div class="card mt-5">
+    <div class="card-header text-center">
+      <h1>Empleados</h1>
+      <p>Informacion de los empleados de la pasteleria:</p> 
+      <a href="{% url 'empleado:registro_empleado' type='pastelero' %}" class="btn btn-success">Agregar Pastelero</a>
+      <a href="{% url 'empleado:registro_empleado' type='decorador' %}" class="btn btn-info">Agregar Decorador</a> 
+    </div>
+    <div class="card-body">
+      <h2 class="text-center">Decoradores</h2> 
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Salario</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for decorador in decoradores %}
+          <tr>
+            <td>{{ decorador.codigo }}</td>
+            <td>{{ decorador.nombre }}</td>
+            <td>{{ decorador.salario }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="card-body">
+      <h2 class="text-center">Pasteleros</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Salario</th>
+            <th>Pasaporte</th>
+            <th>País</th>
+            <th>Experiencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pastelero in pasteleros %}
+          <tr>
+            <td>{{ pastelero.codigo }}</td>
+            <td>{{ pastelero.nombre }}</td>
+            <td>{{ pastelero.salario }}</td>
+            <td>{{ pastelero.pasaporte }}</td>
+            <td>{{ pastelero.pais }}</td>
+            <td>{{ pastelero.exp }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 {% endblock %}
