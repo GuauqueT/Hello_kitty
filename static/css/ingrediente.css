@@ -1,0 +1,30 @@
+body {
+  background-color: #f2ece6;
+  font-family: Arial, sans-serif;
+}
+
+.card-header {
+  background-color: #ffe5b4;
+}
+
+.card-body {
+  background-color: #f9d9c6;
+}
+
+.table th, .table td {
+  border-color: #d6a5a5;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f6e5e5;
+}
+
+.btn {
+  background-color: #ffa07a;
+  border-color: #ffa07a;
+}
+
+.btn:hover {
+  background-color: #ff8c66;
+  border-color: #ff8c66;
+}

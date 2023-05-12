@@ -1,38 +1,40 @@
 {% extends 'base.html' %}
 {% block body %}
-<div class="container-fluid">
-  <div class="card mt-5">
-    <div class="card-header text-center">
-      <h1>Decoraciones</h1>
-      <p>Informacion de las decoraciones de la pasteleria:</p> 
-      <a href="{% url 'decoracion:registro_decoracion' %}" class="btn btn-success">Agregar Decoraciones</a> 
-    </div>
-    <div class="card-body">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Decorador</th>
-            <th>Hora Inicio</th>
-            <th>Hora Fin</th>
-            <th>Peso Final</th>
-            <th>Orden</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for decoracion in decoraciones %}
-          <tr>
-            <td>{{ decoracion.id }}</td>
-            <td>{{ decoracion.decorador }}</td>
-            <td>{{ decoracion.hora_inicio }}</td>
-            <td>{{ decoracion.hora_fin }}</td>
-            <td>{{ decoracion.peso_final }}</td>
-            <td>{{ decoracion.produccion.junta.orden }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </div>
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/ingrediente.css' %}">
+</head>
+<div class="container mt-3">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>   
+  <button type="button" class="btn btn-success">Agregar Empresa</button>
+  <button type="button" class="btn btn-info">Agregar Persona Ext</button>
+  <button type="button" class="btn btn-primary">Agregar Empleado</button>         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 {% endblock %}
