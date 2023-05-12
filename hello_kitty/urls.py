@@ -25,4 +25,7 @@ urlpatterns = [
     path('pastel/',include(('pastel.urls','pastel'), namespace='pastel')),
     path('orden/',include(('orden.urls','orden'), namespace='orden')),
     path('ingrediente/',include(('ingrediente.urls','ingrediente'), namespace='ingrediente')),
+    path('junta/',include(('junta.urls','junta'), namespace='junta')),
+    path('produccion/',include(('produccion.urls','produccion'), namespace='produccion')),
+    path('decoracion/',include(('decoracion.urls','decoracion'), namespace='decoracion')),
 ]

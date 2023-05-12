@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'pastel',
     'orden',
     'ingrediente',
+    'junta',
+    'produccion',
+    'decoracion',
 ]
 
 MIDDLEWARE = [
