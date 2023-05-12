@@ -1,36 +1,61 @@
 {% extends 'base.html' %}
 {% block body %}
-<div class="container mt-3">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>   
-  <button type="button" class="btn btn-success">Agregar Empresa</button>
-  <button type="button" class="btn btn-info">Agregar Persona Ext</button>
-  <button type="button" class="btn btn-primary">Agregar Empleado</button>         
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container-fluid">
+  <div class="card mt-5">
+    <div class="card-header text-center">
+      <h1>Producciones</h1>
+      <p>Informacion de las producciones de la pasteleria:</p> 
+      <a href="{% url 'produccion:registro_horno' %}" class="btn btn-success">Agregar Horno</a>
+      <a href="{% url 'produccion:registro_produccion' %}" class="btn btn-info">Agregar Coccion</a> 
+    </div>
+    <div class="card-body">
+      <h2 class="text-center">Hornos</h2> 
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Marca</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for horno in hornos %}
+          <tr>
+            <td>{{ horno.id }}</td>
+            <td>{{ horno.marca }}</td>
+            <td>{{ horno.valor }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="card-body">
+      <h2 class="text-center">Cocciones</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Temperatura</th>
+            <th>Hora Inicio</th>
+            <th>Hora Fin</th>
+            <th>Horno</th>
+            <th>Pastelero</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for produccion in producciones %}
+          <tr>
+            <td>{{ produccion.id }}</td>
+            <td>{{ produccion.temperatura }}</td>
+            <td>{{ produccion.hora_inicio }}</td>
+            <td>{{ produccion.hora_fin }}</td>
+            <td>{{ produccion.horno }}</td>
+            <td>{{ produccion.junta }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 {% endblock %}
