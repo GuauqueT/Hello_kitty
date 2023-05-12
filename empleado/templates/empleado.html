@@ -16,9 +16,9 @@
     <tbody>
       {% for decorador in decoradores %}
       <tr>
-        {{ decorador.codigo }}
-        {{ decorador.nombre }}
-        {{ decorador.salario }}
+        <td>{{ decorador.codigo }}</td>
+        <td>{{ decorador.nombre }}</td>
+        <td>{{ decorador.salario }}</td>
       </tr>
       {% endfor %}
     </tbody>
@@ -41,12 +41,12 @@
     <tbody>
       {% for pastelero in pasteleros %}
       <tr>
-        {{ pastelero.codigo }}
-        {{ pastelero.nombre }}
-        {{ pastelero.salario }}
-        {{ pastelero.pasaporte }}
-        {{ pastelero.pais }}
-        {{ pastelero.exp }}
+        <td>{{ pastelero.codigo }}</td>
+        <td>{{ pastelero.nombre }}</td>
+        <td>{{ pastelero.salario }}</td>
+        <td>{{ pastelero.pasaporte }}</td>
+        <td>{{ pastelero.pais }}</td>
+        <td>{{ pastelero.exp }}</td>
       </tr>
       {% endfor %}
     </tbody>

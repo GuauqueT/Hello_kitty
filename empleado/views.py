@@ -6,7 +6,6 @@ from .models import *
 # Create your views here.
 def empleado(request):
     pasteleros = Pastelero.objects.all()
-    print(pasteleros)
     decoradores = Decorador.objects.all()
     return render(request, 'empleado.html', {'pasteleros': pasteleros, 'decoradores': decoradores})
 
@@ -17,13 +16,11 @@ def registro_decorador(request, type):
         else:
             form=DecoradorForm(request.POST)
         if form.is_valid():
-            form.save
-            print(form)
+            form.save()
         return redirect('empleado:empleado')
     else:
         if type == 'pastelero':
             form=PasteleroForm
         else:
             form=DecoradorForm
-
-    return render(request, 'form.html', {'form':form})
+        return render(request, 'form.html', {'form':form})
