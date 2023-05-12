@@ -6,13 +6,15 @@ class Orden (models.Model):
     nombre=models.CharField(max_length=50)
     tipo=models.CharField(max_length=50,null=False,blank=False)
     peso_min=models.FloatField(null=False)
-    fecha_solicitud=models.DateTimeField(auto_now_add=True)
-    fecha_entrega=models.DateField(null=False)
-    observaciones=models.CharField(max_length=200)
-    empleado=models.CharField(max_length=50,blank=True)
-    pastel_id=models.ForeignKey(Pastel,blank=False,null=False,on_delete=models.DO_NOTHING)
+    fecha_solicitud=models.DateTimeField()
+    fecha_entrega=models.DateField()
+    observaciones=models.CharField(max_length=200, blank=True)
+    empleado=models.CharField(max_length=50,blank=False)
+    pastel=models.ForeignKey(Pastel,blank=False,null=False,on_delete=models.DO_NOTHING)
+    precio=models.FloatField(null=False, default=1000)
 
-    cantidad=models.CharField(blank=False,max_length=100)
+    def __str__(self) -> str:
+        return f"{self.nombre}"
     
     class Meta:
         verbose_name_plural="Ordenes" 

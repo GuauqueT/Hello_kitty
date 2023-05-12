@@ -7,6 +7,9 @@ class Pastel (models.Model):
     nombre=models.CharField(max_length=50)
     ingrediente=models.ManyToManyField(Ingrediente,blank=False)
     cantidad=models.CharField(blank=False,max_length=100)
+
+    def __str__(self) -> str:
+        return f"{self.nombre}"
     
     class Meta:
         verbose_name_plural="Pasteles" 

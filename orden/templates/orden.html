@@ -1,36 +1,46 @@
 {% extends 'base.html' %}
 {% block body %}
-<div class="container mt-3">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>   
-  <button type="button" class="btn btn-success">Agregar Empresa</button>
-  <button type="button" class="btn btn-info">Agregar Persona Ext</button>
-  <button type="button" class="btn btn-primary">Agregar Empleado</button>         
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container-fluid">
+  <div class="card mt-5">
+    <div class="card-header text-center">
+      <h1>Ordenes</h1>
+      <p>Informacion de las Ordenes de la pasteleria:</p> 
+      <a href="{% url 'orden:registro_orden' %}" class="btn btn-success">Agregar Orden</a> 
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Peso Minimo</th>
+            <th>Fecha Solicitud</th>
+            <th>Fecha Entrega</th>
+            <th>Observaciones</th>
+            <th>Empleado</th>
+            <th>Pastel</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for orden in ordenes %}
+          <tr>
+            <td>{{ orden.id }}</td>
+            <td>{{ orden.nombre }}</td>
+            <td>{{ orden.tipo }}</td>
+            <td>{{ orden.peso_min }}</td>
+            <td>{{ orden.fecha_solicitud }}</td>
+            <td>{{ orden.fecha_entrega }}</td>
+            <td>{{ orden.observaciones }}</td>
+            <td>{{ orden.empleado }}</td>
+            <td>{{ orden.pastel }}</td>
+            <td>{{ orden.precio }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 {% endblock %}
